@@ -6,7 +6,7 @@ An interactive web page through which a user can generate their own short storie
 
 - The web page would present appropriate text (story) with a soundtrack and gif
 
-The application is based on a model which is trained on stories related to three genres- crime, romance and horror. Based on the option selected by the user, a text of the particular genre would be displayed on a new webpage. The model is built using a open source dependency- textgenrnn.
+The application is based on a RNN- LSTM model which is trained on stories related to three genres- crime, romance and horror. Based on the option selected by the user, a text of the particular genre would be displayed on a new webpage. The model is built using a open source dependency- textgenrnn.
 
 #### Textgenrnn- (https://github.com/minimaxir/textgenrnn)
 It is a Python 3 module on top of Keras/TensorFlow for creating char-rnns, with many cool features:
