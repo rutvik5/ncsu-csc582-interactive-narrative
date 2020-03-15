@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<title>The PlotBot Creation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("media/cover.jpeg");
+  min-height: 90%;
+}
+
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+}
+
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+
+</style>
+
+
+
+<body>
+
+
+  
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-padding">
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white w3-hide-small" style="font-size:100px">THE<br>PlotBot</span>
+    <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>thin<br>PlotBot</b></span>
+    <p><a href="#menu" class="w3-button w3-xxlarge w3-black">Generate Stories</a></p>
+  </div>
+</header>
+
+<!-- Menu Container -->
+<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">SELECT A GENRE</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Crime</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Horror</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Romance</div>
+      </a>
+    </div>
+
+    <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Title</b> <span class="w3-right w3-tag w3-dark-grey w3-round"></span></h1>
+       <input type="text" id = "title" name="firstname" size="65"><br>
+      <hr>
+         
+
+        <body>
+      
+         <h1><b>Enter a Phrase</b> <span class="w3-right w3-tag w3-dark-grey w3-round"></span></h1>
+         <input name = "mohit" id="first_name" size = "65"><br><br>
+<button id="say">Generate</button>
+ 
+<br>
+<div>
+<p id = 'old_string' class = 'inline'></p>
+<p id = 'new_string' class = 'inline'></p>
+
+</div>
+      
+	  
+	
+	    <h1><center> <button class="button button2" onclick="publish_story()"  >Publish Your Story</button> </center></h1>    
+	  
+	  
+   </body>
+	
+
+
+    </div>
+
+    <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Title</b> <span class="w3-right w3-tag w3-dark-grey w3-round"></span></h1>
+       <input type="text" id = "title_horror" name="firstname" size="65"><br>
+      <hr>  
+        <body>      
+         <h1><b>Enter a Phrase</b> <span class="w3-right w3-tag w3-dark-grey w3-round"></span></h1>
+        <input name = "mohit" id="horror_text" size = "65"><br><br>
+        <button id="horror">Generate</button>
+ 
+<br>
+<div>
+<p id = 'old_string_horror' class = 'inline'></p>
+<p id = 'new_string_horror' class = 'inline'></p>
+    </div>
+
+</body>
+
+<h1><center> <button class="button button2" onclick="publish_horror()"><input type = "button" >Want to Publish Story</button> </center></h1>   
+
+
+    <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Title</b> <span class="w3-right wpublish_3-tag w3-dark-grey w3-round"></span></h1>
+     <input type="text" name="first1" size="65"><br>
+      <hr>
+   
+      <h1><b>Hero</b> <span class="w3-right w3-tag w3-dark-grey w3-round"></span></h1>
+      <input type="text" name="second1" size="65"><br>
+      <hr>
+      
+      <h1><b>Evil Emperor</b> <span class="w3-right w3-tag w3-dark-grey w3-round"></span></h1>
+      <input type="text" name="third1" size="65"><br>
+      <hr>
+      
+      <h1><b>Helpless Character Name</b> <span class="w3-right w3-tag w3-dark-grey w3-round"></span></h1>
+      <input type="text" name="fourth1" size="65"><br>
+
+      <p id = "generatess"> You story would start generating here</p> +
+      
+      <h1><center> <button class="button button2" id = "generate_story" onclick="generate_story">GENERATE STORY</button> </center></h1>  
+       
+
+    </div><br>
+    	
+  </div>
+
+</div>
+<br>
+<!-- About Container -->
+<div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
+    <p>Our goal is to create a web app which generates short stories. The key feature is that the user
+may select a certain genre for the story to follow. The user will also be given the option to fill
+certain fields such as character names, locations, etc. Based upon the genre of the game
+chosen by the user, the outcome of the web page would be the combination of a short story with
+appropriate soundtrack and images.</p>
+    
+    
+   
+    
+  </div>
+</div>
+
+<!-- Image of location/map -->
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+  <p> <title="W3.CSS" target="_blank" class="w3-hover-text-green">The PlotBot Creation</a></p>
+</footer>
+
+<script>
+var string = ""
+
+
+function say_hi() {
+    var fname = document.getElementById('first_name').value;
+
+    var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("old_string").innerHTML = string ;
+      string = string + this.responseText + " ";
+      document.getElementById("new_string").innerHTML = this.responseText + " " ;
+      document.getElementById('new_string').style.color = 'green';
+      localStorage.setItem("story",string);
+      localStorage.setItem("title",document.getElementById('title').innerHTML);
+    }
+  };
+  xhttp.open("GET", "http://127.0.0.1:5000/generate_sentences/crime/"+ fname + "/2", true);
+  xhttp.send();
+
+}
+
+document.getElementById('say').addEventListener('click', say_hi);
+
+
+function horror_story() {
+    var fname = document.getElementById('horror_text').value;
+
+    var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("old_string_horror").innerHTML = string ;
+      string = string + this.responseText + " ";
+      document.getElementById("new_string_horror").innerHTML = this.responseText + " " ;
+      document.getElementById('new_string_horror').style.color = 'green';
+      localStorage.setItem("story",string);
+      localStorage.setItem("title_horror",document.getElementById('title_horror').innerHTML);
+    }
+  };
+  xhttp.open("GET", "http://127.0.0.1:5000/generate_sentences/horror/"+ fname + "/2", true);
+  xhttp.send();
+
+}
+
+document.getElementById('horror').addEventListener('click', horror_story);
+
+// Tabbed Menu
+
+
+var field1 = "first1";
+var field1 = "first";
+var field2 = "second"
+var field3 = "third"
+var field4 = "fifth"
+var field5 = "sixth"
+
+
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+
+
+function publish_story() {
+
+   title = document.getElementById('title').value;
+   localStorage.setItem("title",title);
+   localStorage.setItem("story",string);
+   
+   window.open("crime.html");
+   document.getElementById("demo").innerHTML = t;
+}
+
+function publish_horror() {
+  
+   title = document.getElementById('title_horror').value;
+   localStorage.setItem("title",title);
+   localStorage.setItem("story",string);
+   
+   window.open("crime.html");
+  document.getElementById("demo").innerHTML = t;
+}
+
+
+
+</script>
+
+</body>
+</html>
