@@ -1,6 +1,6 @@
 ## Haunted House
 
-This is interactive narrative fiction game based on a short film- The Maiden (Director- Michael Chaves) built using Twine. It showcases the different characteristics of an interactive narrative game. The user can choose form a set of options to determine how the story progresses forward. The game has multiple endings. The time required to play the entire game (including all endings) is 20 mins.  
+This is interactive narrative fiction game based on a short film- The Maiden (Director- Michael Chaves) built using Twine. It showcases the different characteristics of an interactive narrative game. The user can choose form a set of options to determine how the story progresses forward. The game has multiple endings. The time required to play the entire game (including all endings) is 20 mins. The screenshots of the game can be found in the screenshots folder
 
 Twine is an open-source tool for telling interactive, nonlinear stories. (https://twinery.org/)
 
